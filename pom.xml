@@ -28,7 +28,7 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		-->
-		<maven.compiler.release>11</maven.compiler.release>
+		<maven.compiler.release>15</maven.compiler.release>
 		<mainClass>geolocator.GeoLocator</mainClass>
 		<jackson-databind.version>2.12.1</jackson-databind.version>
 	</properties>
@@ -50,13 +50,6 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson-databind.version}</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.18</version>
 			<scope>compile</scope>
 		</dependency>
 
@@ -111,20 +104,6 @@
 				<configuration>
 					<mainClass>${mainClass}</mainClass>
 				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok-maven-plugin</artifactId>
-				<version>1.18.16.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>delombok</goal>
-						</goals>
-						<phase>generate-sources</phase>
-					</execution>
-				</executions>
 			</plugin>
 
 			<plugin>
